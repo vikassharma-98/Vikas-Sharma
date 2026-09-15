@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vikas Online Services | Jan Seva Kendra</title>
+
+<meta name="description" content="Vikas Online Services - Jan Seva Kendra. Aadhaar, Voter ID, PAN Card, Driving Licence, Passport, Vehicle Insurance and Online Form services.">
+
+<style>
+
+/* ================= BASIC ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f7fb;
+    color:#172033;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    background:linear-gradient(135deg,#071d49,#0756b8);
+    color:white;
+    padding:16px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,.2);
+}
+
+.logo{
+    font-size:23px;
+    font-weight:bold;
+    color:white;
+}
+
+.logo span{
+    display:block;
+    font-size:12px;
+    color:white;
+    margin-top:4px;
+    letter-spacing:1px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:22px;
+    font-weight:bold;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#ffd43b;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:540px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:70px 20px;
+
+    background:
+    linear-gradient(rgba(3,24,61,.90),rgba(0,77,160,.90)),
+    radial-gradient(circle at top,#1784ff,#031738);
+
+    color:white;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.badge{
+    display:inline-block;
+    background:#ffd43b;
+    color:#111;
+    padding:9px 18px;
+    border-radius:30px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:52px;
+    margin-bottom:18px;
+}
+
+.hero h1 span{
+    color:white;
+}
+
+.hero p{
+    font-size:19px;
+    line-height:1.7;
+    color:#e6f1ff;
+}
+
+.buttons{
+    margin-top:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    margin:6px;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#ffd43b;
+    color:#111;
+}
+
+.btn-whatsapp{
+    background:#16b85a;
+    color:white;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+/* ================= SECTION ================= */
+
+section{
+    padding:65px 7%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:34px;
+    color:#092d67;
+}
+
+.section-title p{
+    color:#667085;
+    margin-top:8px;
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:22px;
+}
+
+.card{
+    background:white;
+    padding:28px 22px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+    border:1px solid #e7ebf2;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 30px rgba(0,0,0,.12);
+}
+
+.icon{
+    width:55px;
+    height:55px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#eaf3ff;
+    border-radius:12px;
+    font-size:27px;
+    margin-bottom:18px;
+}
+
+.card h3{
+    color:#092d67;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#667085;
+    line-height:1.6;
+    font-size:14px;
+}
+
+/* ================= DOCUMENT BUTTON ================= */
+
+.doc-btn{
+    width:100%;
+    margin-top:18px;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#092d67;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    font-size:14px;
+    transition:.3s;
+}
+
+.doc-btn:hover{
+    background:#0756b8;
+}
+
+.doc-btn:active{
+    transform:scale(.98);
+}
+
+/* ================= DOCUMENT BOX ================= */
+
+.documents{
+    display:none;
+    margin-top:12px;
+    padding:16px;
+    background:#f1f6ff;
+    border-left:4px solid #0756b8;
+    border-radius:9px;
+    text-align:left;
+    color:#333;
+    font-size:14px;
+    line-height:1.7;
+}
+
+.documents b{
+    color:#092d67;
+}
+
+.documents ul{
+    margin:8px 0 0 18px;
+}
+
+.documents li{
+    margin-bottom:5px;
+}
+
+/* ================= WHY US ================= */
+
+.why{
+    background:#eef5ff;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.feature{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+}
+
+.feature .icon{
+    margin:auto;
+}
+
+.feature b{
+    display:block;
+    margin-top:15px;
+    color:#092d67;
+}
+
+.feature p{
+    color:#667085;
+    font-size:14px;
+    margin-top:7px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-box{
+    max-width:900px;
+    margin:auto;
+    background:linear-gradient(135deg,#062457,#0870d8);
+    color:white;
+    padding:45px 25px;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.contact-box h2{
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.phone{
+    font-size:21px;
+    font-weight:bold;
+    margin:20px 0;
+}
+
+.phone a{
+    color:white;
+    text-decoration:none;
+    display:block;
+    margin:10px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#07152e;
+    color:#c9d4e5;
+    text-align:center;
+    padding:30px 15px;
+}
+
+footer strong{
+    color:white;
+}
+
+footer p{
+    margin:8px;
+    font-size:14px;
+}
+
+/* ================= WHATSAPP BUTTON ================= */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    background:#16b85a;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:27px;
+    box-shadow:0 5px 20px rgba(0,0,0,.25);
+    z-index:999;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    header{
+        padding:14px 5%;
+    }
+
+    .logo{
+        font-size:18px;
+    }
+
+    .logo span{
+        font-size:10px;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        min-height:570px;
+        padding:60px 18px;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    section{
+        padding:50px 5%;
+    }
+
+    .section-title h2{
+        font-size:28px;
+    }
+
+    .services{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        padding:24px 20px;
+    }
+
+    .contact-box h2{
+        font-size:27px;
+    }
+
+    .phone{
+        font-size:18px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="logo">
+    Vikas Online Services
+    <span>JAN SEVA KENDRA</span>
+</div>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">Why Us</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="badge">
+    DIGITAL & ONLINE SERVICES
+</div>
+
+<h1>
+    Vikas <span>Online Services</span>
+</h1>
+
+<p>
+    आपका भरोसेमंद <b>Jan Seva Kendra</b><br>
+    Aadhaar, Voter ID, PAN Card, Driving Licence,
+    Passport, Vehicle Insurance एवं Online Form की सुविधा।
+</p>
+
+<div class="buttons">
+
+<a class="btn btn-primary" href="#services">
+    View Services
+</a>
+
+<a class="btn btn-whatsapp"
+   href="https://wa.me/919563064521"
+   target="_blank">
+    WhatsApp Now
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services">
+
+<div class="section-title">
+
+<h2>हमारी प्रमुख सेवाएं</h2>
+
+<p>
+एक ही स्थान पर विभिन्न डिजिटल एवं ऑनलाइन सेवाएं
+</p>
+
+</div>
+
+
+<div class="services">
+
+
+<!-- AADHAAR -->
+
+<div class="card">
+
+<div class="icon">🪪</div>
+
+<h3>Aadhaar Services</h3>
+
+<p>
+Aadhaar से संबंधित online services,
+update, correction एवं अन्य सहायता।
+</p>
+
+</div>
+
+
+<!-- VOTER -->
+
+<div class="card">
+
+<div class="icon">🗳️</div>
+
+<h3>Voter ID Services</h3>
+
+<p>
+Voter ID registration, correction,
+address update एवं अन्य online services।
+</p>
+
+<button class="doc-btn"
+onclick="toggleDocs('voter',this)">
+📄 Related Documents
+</button>
+
+<div class="documents" id="voter">
+
+<b>Voter ID बनवाने के लिए:</b>
+
+<ul>
+<li>Photo</li>
+<li>Aadhaar Card</li>
+<li>Marksheet (यदि है तो)</li>
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- PAN -->
+
+<div class="card">
+
+<div class="icon">💳</div>
+
+<h3>PAN Card Services</h3>
+
+<p>
+New PAN Card, correction, download एवं
+PAN से संबंधित online services।
+</p>
+
+<button class="doc-btn"
+onclick="toggleDocs('pan',this)">
+📄 Related Documents
+</button>
+
+<div class="documents" id="pan">
+
+<b>PAN Card बनवाने के लिए:</b>
+
+<ul>
+<li>Aadhaar Card</li>
+<li>Photo</li>
+<li>Signature</li>
+<li>High School Marksheet या कोई अन्य Date of Birth Proof</li>
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- PASSPORT -->
+
+<div class="card">
+
+<div class="icon">🌐</div>
+
+<h3>Passport Services</h3>
+
+<p>
+Passport application, appointment assistance
+एवं passport related services।
+</p>
+
+<button class="doc-btn"
+onclick="toggleDocs('passport',this)">
+📄 Related Documents
+</button>
+
+<div class="documents" id="passport">
+
+<b>Passport के लिए:</b>
+
+<ul>
+<li>Aadhaar Card</li>
+<li>PAN Card</li>
+<li>Bank Passbook</li>
+<li>High School Marksheet (यदि है तो)</li>
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- DRIVING LICENCE -->
+
+<div class="card">
+
+<div class="icon">🚘</div>
+
+<h3>Driving Licence</h3>
+
+<p>
+Learning Licence, Driving Licence, renewal,
+correction एवं licence related services।
+</p>
+
+<button class="doc-btn"
+onclick="toggleDocs('dl',this)">
+📄 Related Documents
+</button>
+
+<div class="documents" id="dl">
+
+<b>Driving Licence के लिए:</b>
+
+<ul>
+<li>Aadhaar Card</li>
+<li>PAN Card</li>
+<li>Signature</li>
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- AAY JATI NIWAS -->
+
+<div class="card">
+
+<div class="icon">📑</div>
+
+<h3>आय • जाति • निवास</h3>
+
+<p>
+आय, जाति एवं निवास प्रमाण पत्र के लिए
+online आवेदन की सुविधा।
+</p>
+
+<button class="doc-btn"
+onclick="toggleDocs('certificate',this)">
+📄 Related Documents
+</button>
+
+<div class="documents" id="certificate">
+
+<b>आय • जाति • निवास के लिए:</b>
+
+<ul>
+<li>Aadhaar Card</li>
+<li>पार्षद स्लिप</li>
+<li>घर में किसी सदस्य का जाति प्रमाण पत्र</li>
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- VEHICLE INSURANCE -->
+
+<div class="card">
+
+<div class="icon">🛵</div>
+
+<h3>Vehicle Insurance</h3>
+
+<p>
+Bike, Car एवं अन्य सभी वाहनों के लिए
+Insurance related online services।
+</p>
+
+</div>
+
+
+<!-- ONLINE FORM -->
+
+<div class="card">
+
+<div class="icon">📝</div>
+
+<h3>Online Form Apply</h3>
+
+<p>
+Government एवं अन्य online forms भरने
+और आवेदन करने की सुविधा।
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ================= WHY US ================= -->
+
+<section class="why" id="about">
+
+<div class="section-title">
+
+<h2>क्यों चुनें Vikas Online Services?</h2>
+
+<p>
+विश्वसनीय और आसान ऑनलाइन सेवा
+</p>
+
+</div>
+
+
+<div class="features">
+
+
+<div class="feature">
+
+<div class="icon">⚡</div>
+
+<b>Fast Service</b>
+
+<p>
+काम को आसान और तेज बनाने का प्रयास।
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="icon">🔒</div>
+
+<b>Secure Assistance</b>
+
+<p>
+आपके दस्तावेजों की गोपनीयता का ध्यान।
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="icon">📱</div>
+
+<b>Easy Contact</b>
+
+<p>
+फोन और WhatsApp के माध्यम से संपर्क करें।
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="icon">🤝</div>
+
+<b>Trusted Service</b>
+
+<p>
+ऑनलाइन कार्यों में भरोसेमंद सहायता।
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+<div class="contact-box">
+
+<h2>हमसे संपर्क करें</h2>
+
+<p>
+किसी भी ऑनलाइन सेवा या फॉर्म के लिए अभी संपर्क करें।
+</p>
+
+
+<div class="phone">
+
+<a href="tel:9563064521">
+📞 9563064521
+</a>
+
+<a href="tel:9889639045">
+📞 9889639045
+</a>
+
+</div>
+
+
+<div class="buttons">
+
+<a class="btn btn-primary"
+href="tel:9563064521">
+📞 Call Now
+</a>
+
+<a class="btn btn-whatsapp"
+href="https://wa.me/919563064521"
+target="_blank">
+💬 WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+<strong>Vikas Online Services</strong> | Jan Seva Kendra
+</p>
+
+<p>
+Aadhaar • Voter ID • PAN • Driving Licence • Passport
+• Vehicle Insurance • Online Forms
+</p>
+
+<p>
+© 2026 Vikas Online Services. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<!-- ================= FLOATING WHATSAPP ================= -->
+
+<a class="whatsapp"
+href="https://wa.me/919563064521"
+target="_blank"
+aria-label="WhatsApp">
+
+💬
+
+</a>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+function toggleDocs(id, button){
+
+    const box = document.getElementById(id);
+
+    if(box.style.display === "block"){
+
+        box.style.display = "none";
+
+        button.innerHTML = "📄 Related Documents";
+
+    }else{
+
+        box.style.display = "block";
+
+        button.innerHTML = "📄 Hide Documents";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
